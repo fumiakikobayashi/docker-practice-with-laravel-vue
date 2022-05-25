@@ -1,3 +1,3 @@
-## Laravel＋Vue.js＋Dockerを使った簡易的なCRUDシステム
+## Laravel＋Vue.jsの環境をDockerを使って構築する
 
-詳細は追々追記していく。
+Dockerを使った環境構築のpracticeのため内部の実装はしておりません。
