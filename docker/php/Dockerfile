@@ -1,14 +1,14 @@
-FROM php:7.4.1-fpm
+FROM php:8.1.6-fpm
 
 # COPY php.ini
 COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 
 # Composer install
-COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
 
 # install Node.js
-COPY --from=node:10.22 /usr/local/bin /usr/local/bin
-COPY --from=node:10.22 /usr/local/lib /usr/local/lib
+COPY --from=node:16.1 /usr/local/bin /usr/local/bin
+COPY --from=node:16.1 /usr/local/lib /usr/local/lib
 
 RUN apt-get update && \
     apt-get -y install \
